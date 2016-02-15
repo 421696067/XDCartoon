@@ -17,7 +17,6 @@
 }
 @property (nonatomic,strong)UITableView * indexTableView;
 @end
-
 @implementation XFSortDetailController
 
 - (void)viewDidLoad {

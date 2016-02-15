@@ -68,6 +68,12 @@
 		07734C091C42AB2E001B4777 /* TuiJianFLFoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 07734C071C42AB2E001B4777 /* TuiJianFLFoot.m */; };
 		0782C2931C44B7EA00D28EA1 /* AnimaDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0782C2921C44B7EA00D28EA1 /* AnimaDetailController.m */; };
 		0782C2961C44B8DA00D28EA1 /* HTMLPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 0782C2951C44B8DA00D28EA1 /* HTMLPlay.m */; };
+		078B45A21C5A5C3E00006C34 /* NoAdressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 078B45A11C5A5C3E00006C34 /* NoAdressView.m */; };
+		078B45A41C5A5C6500006C34 /* NoAdressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078B45A31C5A5C6500006C34 /* NoAdressView.xib */; };
+		078B45A71C5A791900006C34 /* FenQBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 078B45A61C5A791900006C34 /* FenQBModel.m */; };
+		078B45AC1C5A7F4600006C34 /* FenQBHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 078B45AA1C5A7F4600006C34 /* FenQBHotCell.m */; };
+		078B45AD1C5A7F4600006C34 /* FenQBHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 078B45AB1C5A7F4600006C34 /* FenQBHotCell.xib */; };
+		078B45B01C5A7F7E00006C34 /* FenQBHotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 078B45AF1C5A7F7E00006C34 /* FenQBHotView.m */; };
 		079170F81C40238F0046F393 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 079170F41C40238F0046F393 /* NSObject+YYModel.m */; };
 		079170F91C40238F0046F393 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 079170F61C40238F0046F393 /* YYClassInfo.m */; };
 		079170FD1C40C2BC0046F393 /* HYBNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 079170FC1C40C2BC0046F393 /* HYBNetworking.m */; };
@@ -325,6 +331,16 @@
 		0782C2921C44B7EA00D28EA1 /* AnimaDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimaDetailController.m; sourceTree = "<group>"; };
 		0782C2941C44B8DA00D28EA1 /* HTMLPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLPlay.h; sourceTree = "<group>"; };
 		0782C2951C44B8DA00D28EA1 /* HTMLPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLPlay.m; sourceTree = "<group>"; };
+		078B45A01C5A5C3E00006C34 /* NoAdressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoAdressView.h; sourceTree = "<group>"; };
+		078B45A11C5A5C3E00006C34 /* NoAdressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoAdressView.m; sourceTree = "<group>"; };
+		078B45A31C5A5C6500006C34 /* NoAdressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoAdressView.xib; sourceTree = "<group>"; };
+		078B45A51C5A791900006C34 /* FenQBModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FenQBModel.h; sourceTree = "<group>"; };
+		078B45A61C5A791900006C34 /* FenQBModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FenQBModel.m; sourceTree = "<group>"; };
+		078B45A91C5A7F4600006C34 /* FenQBHotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FenQBHotCell.h; sourceTree = "<group>"; };
+		078B45AA1C5A7F4600006C34 /* FenQBHotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FenQBHotCell.m; sourceTree = "<group>"; };
+		078B45AB1C5A7F4600006C34 /* FenQBHotCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FenQBHotCell.xib; sourceTree = "<group>"; };
+		078B45AE1C5A7F7E00006C34 /* FenQBHotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FenQBHotView.h; sourceTree = "<group>"; };
+		078B45AF1C5A7F7E00006C34 /* FenQBHotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FenQBHotView.m; sourceTree = "<group>"; };
 		079170F31C40238F0046F393 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
 		079170F41C40238F0046F393 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
 		079170F51C40238F0046F393 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
@@ -680,7 +696,7 @@
 			children = (
 				076F00F31C3D34E600FC2263 /* News(资讯) */,
 				076F00F21C3D34D900FC2263 /* ManHua(漫画) */,
-				076F00F11C3D34C700FC2263 /* TuiJian(推荐动画) */,
+				076F00F11C3D34C700FC2263 /* TuiJian(动画) */,
 				076F00F01C3D34AB00FC2263 /* My(个人主页) */,
 				076F00EF1C3D34A200FC2263 /* main(主要的) */,
 			);
@@ -914,13 +930,13 @@
 			name = "My(个人主页)";
 			sourceTree = "<group>";
 		};
-		076F00F11C3D34C700FC2263 /* TuiJian(推荐动画) */ = {
+		076F00F11C3D34C700FC2263 /* TuiJian(动画) */ = {
 			isa = PBXGroup;
 			children = (
 				07D78D871C3FC9470090D71F /* controller */,
 				07AD583F1C3EAD09001A816E /* view */,
 			);
-			name = "TuiJian(推荐动画)";
+			name = "TuiJian(动画)";
 			sourceTree = "<group>";
 		};
 		076F00F21C3D34D900FC2263 /* ManHua(漫画) */ = {
@@ -1009,6 +1025,18 @@
 				0782C2951C44B8DA00D28EA1 /* HTMLPlay.m */,
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		078B45B31C5A7F9600006C34 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				078B45AE1C5A7F7E00006C34 /* FenQBHotView.h */,
+				078B45AF1C5A7F7E00006C34 /* FenQBHotView.m */,
+				078B45A91C5A7F4600006C34 /* FenQBHotCell.h */,
+				078B45AA1C5A7F4600006C34 /* FenQBHotCell.m */,
+				078B45AB1C5A7F4600006C34 /* FenQBHotCell.xib */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 		079170F21C40237D0046F393 /* yymodel */ = {
@@ -1276,6 +1304,9 @@
 			children = (
 				07F4FE8C1C512AAA005A5417 /* FenQvButController.h */,
 				07F4FE8D1C512AAA005A5417 /* FenQvButController.m */,
+				078B45A51C5A791900006C34 /* FenQBModel.h */,
+				078B45A61C5A791900006C34 /* FenQBModel.m */,
+				078B45B31C5A7F9600006C34 /* view */,
 			);
 			name = "AMD更多界面(分类界面)";
 			sourceTree = "<group>";
@@ -1531,6 +1562,9 @@
 				07F4FE871C4FF9D4005A5417 /* XFSortDetailController.m */,
 				07F4FE891C50182A005A5417 /* XFSortDetailCell.h */,
 				07F4FE8A1C50182A005A5417 /* XFSortDetailCell.m */,
+				078B45A01C5A5C3E00006C34 /* NoAdressView.h */,
+				078B45A11C5A5C3E00006C34 /* NoAdressView.m */,
+				078B45A31C5A5C6500006C34 /* NoAdressView.xib */,
 			);
 			name = "1月新番";
 			sourceTree = "<group>";
@@ -1651,8 +1685,10 @@
 				076F00421C3D2F4900FC2263 /* LaunchScreen.storyboard in Resources */,
 				07F0082B1C439E3E00C2B193 /* FanZuCollectionCell.xib in Resources */,
 				07A8E6251C440BCC002EF2B7 /* FenQvCell.xib in Resources */,
+				078B45AD1C5A7F4600006C34 /* FenQBHotCell.xib in Resources */,
 				076F003F1C3D2F4900FC2263 /* Assets.xcassets in Resources */,
 				07DA155B1C4D48A40003638E /* SortCollectionCell.xib in Resources */,
+				078B45A41C5A5C6500006C34 /* NoAdressView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1705,6 +1741,7 @@
 				0782C2961C44B8DA00D28EA1 /* HTMLPlay.m in Sources */,
 				07A3339A1C40ED5E002E7374 /* UIImage+YYWebImage.m in Sources */,
 				07DA15501C4D283A0003638E /* SortViewController.m in Sources */,
+				078B45A71C5A791900006C34 /* FenQBModel.m in Sources */,
 				07D78D901C3FCB820090D71F /* XDTuiJianViewController.m in Sources */,
 				079170FD1C40C2BC0046F393 /* HYBNetworking.m in Sources */,
 				07A334051C4115F2002E7374 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1746,6 +1783,7 @@
 				07D78DA61C4015AC0090D71F /* TuiJianModel.m in Sources */,
 				07D84E9C1C4D67DA0013FF57 /* ZhuTiSectionHead.m in Sources */,
 				076F00791C3D306C00FC2263 /* AnimatedDotView.m in Sources */,
+				078B45B01C5A7F7E00006C34 /* FenQBHotView.m in Sources */,
 				07A333DC1C410699002E7374 /* ViewController+MASAdditions.m in Sources */,
 				07D84EB71C4EB2170013FF57 /* UITableViewCell+HYBMasonryAutoCellHeight.m in Sources */,
 				0767ABE01C4222A6000818AE /* TuiJianFLModel.m in Sources */,
@@ -1756,6 +1794,7 @@
 				07A3339B1C40ED5E002E7374 /* UIImageView+YYWebImage.m in Sources */,
 				07A3340E1C4115F2002E7374 /* UIView+WebCacheOperation.m in Sources */,
 				07DA15441C4CF6410003638E /* UINavigationController+Autorotate.m in Sources */,
+				078B45AC1C5A7F4600006C34 /* FenQBHotCell.m in Sources */,
 				07A333D81C410699002E7374 /* MASViewConstraint.m in Sources */,
 				076F00C81C3D313A00FC2263 /* AFURLResponseSerialization.m in Sources */,
 				07A333981C40ED5E002E7374 /* MKAnnotationView+YYWebImage.m in Sources */,
@@ -1764,6 +1803,7 @@
 				07DA154D1C4D28270003638E /* ZhuanTiController.m in Sources */,
 				076F00F81C3D355600FC2263 /* MainTabBarController.m in Sources */,
 				076F00E81C3D329900FC2263 /* ParentNavigation.m in Sources */,
+				078B45A21C5A5C3E00006C34 /* NoAdressView.m in Sources */,
 				076F00DF1C3D319500FC2263 /* YRSideViewController.m in Sources */,
 				07A333D31C410699002E7374 /* MASCompositeConstraint.m in Sources */,
 				07A534B21C46138F0072AEDC /* AllHotTJController.m in Sources */,

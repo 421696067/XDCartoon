@@ -9,5 +9,5 @@
 #import "ParentViewController.h"
 
 @interface FenQvButController : ParentViewController
-
+@property (nonatomic,strong)NSString * _id;
 @end

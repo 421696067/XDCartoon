@@ -9,6 +9,7 @@
 #import "XFSortDetailCell.h"
 #import "AnimaDetailModel.h"
 #import "StarView.h"
+#import "NoAdressView.h"
 @interface XFSortDetailCell ()
 /*!
  * 通过cellID 排列布局  代表有地下的intro的详细介绍
@@ -24,6 +25,7 @@
 @property (nonatomic,strong)UILabel * intro;
 @property (nonatomic,strong)UIView * containView ;//包含所有控件的视图
 @property (nonatomic,strong)UIView * backView ;//设置颜色
+@property (nonatomic,strong)NoAdressView * topView;//是否有 播放源
 @end
 
 @implementation XFSortDetailCell
@@ -34,9 +36,7 @@
         self.style  = style;
         self.backgroundColor=[UIColor clearColor];
         self.selectionStyle=UITableViewCellSelectionStyleNone;
-
         //TODO: 一下的 全都是错的~~求破
-        
         //设置最下面的视图
         //if([reuseIdentifier  isEqualToString:@"SumSortCell"])
         //!!!: 这里不能利用reuseIdentifier 进行判断  也不能利用重写这个系统方法传值来判断那样的话~~系统不会调用的
@@ -46,26 +46,28 @@
          *   这里  UITableViewCellStyleDefault
          有底部的详细介绍的cell样式
          *   UITableViewCellStyleValue1 没有底部intro的cell
-         *
          */
         //添加视图
         [self addView];
         //添加约束
         [self addAutoLayout];
-            self.hyb_lastViewInCell = self.iconImage;
-            self.hyb_bottomOffsetToCell = 2*View_Radio+15*View_Radio;
+        
+        
+        
+        self.hyb_lastViewInCell = self.iconImage;
+        self.hyb_bottomOffsetToCell = 2*View_Radio+15*View_Radio;
       }
     return self;
 }
 
-
 -(void)addView
 {
-    
     [self.contentView addSubview:self.backView];
-    
     [self.contentView addSubview:self.containView];
+    
     [self.containView addSubview:self.iconImage];
+    [self.containView addSubview:self.topView];
+    
     [self.containView addSubview:self.nameLabel];
     [self.containView addSubview:self.type];
     [self.containView addSubview:self.EpCount];
@@ -84,8 +86,15 @@
     [self.backView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.bottom.right.equalTo(self.containView);
     }];
-    
+//    
     [self.iconImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(10*View_Radio);
+        make.top.mas_equalTo(7*View_Radio);
+        make.width.mas_equalTo(60*View_Radio);
+        make.height.mas_equalTo(75*View_Radio);
+    }];
+    
+    [self.topView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(10*View_Radio);
         make.top.mas_equalTo(7*View_Radio);
         make.width.mas_equalTo(60*View_Radio);
@@ -128,6 +137,17 @@
     return _iconImage;
 }
 
+//TODO: 自定制view  init方法里 加载xib
+-(NoAdressView *)topView
+{
+    if (!_topView) {
+        _topView = [[NoAdressView alloc] init];
+        _topView.layer.masksToBounds=YES;
+        _topView.layer.cornerRadius=5.0f;
+    }
+    return _topView;
+}
+
 -(UILabel *)nameLabel
 {
     if (!_nameLabel) {
@@ -149,6 +169,7 @@
     }
     return _EpCount;
 }
+
 -(StarView *)star
 {
     if (!_star)
@@ -183,7 +204,8 @@
 }
 
 #pragma mark-配置数据
-- (void)configCellWithModel:(AnimaDetailModel *)model{
+- (void)configCellWithModel:(AnimaDetailModel *)model
+{
     [self.iconImage sd_setImageWithURL:[NSURL URLWithString:model.url]];
     self.nameLabel.text=model.name;
     self.type.text=[model.categoryNames  componentsJoinedByString:@"/"];
@@ -191,6 +213,23 @@
      * 优化 c=表达式? 正确的结果:错误的结果
      */
     self.EpCount.text = [model.onairEpNumber isEqualToString:model.totalEpCount]?[NSString stringWithFormat:@"%@话全",model.totalEpCount]:[NSString stringWithFormat:@"更新至%@话",model.onairEpNumber];
-    [self.star setStar:[model.score floatValue]/2];
+    if ([model.score isEqualToString:@"0"])
+    {   [self.star setStar:[model.score floatValue]/2];
+        [self.star removeFromSuperview];
+    }
+    else
+    {
+        [self.star setStar:[model.score floatValue]/2];
+    }
+    
+    if ([model.onairEpNumber intValue] !=0)
+    {
+        [self.topView removeFromSuperview];
+    }
+    else
+    {
+    
+    }
+    
 }
 @end

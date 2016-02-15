@@ -8,10 +8,14 @@
 
 #import "XDTuiJianController.h"
 /*!
- *  测试专用 接口
+ * 分类专题
  */
 #import "SortZTController.h"
 
+/*!
+ * 分区的AMD 等按钮
+ */
+#import "FenQvButController.h"
 
 //标题titleView
 #import "SegementView.h"
@@ -247,7 +251,7 @@
 -(void)fenzuSort
 {
 SortZTController * svc=[[SortZTController alloc] init];
-  [self.navigationController pushViewController:svc animated:YES];
+  [self pushVc:svc];
 }
 
 #pragma mark-新番-新番时间表
@@ -270,9 +274,15 @@ SortZTController * svc=[[SortZTController alloc] init];
 #pragma mark-推荐-尾部视图 也就是 分区的按钮点击
 -(void)didfootBut:(NSString *)_id
 {
-   
-
+    NSLog(@"头部image -URl--%@",[NSString stringWithFormat:AMD_More_Image,_id]);
+    NSLog(@"Hot -Url--%@",[NSString stringWithFormat:AMD_More_Hots,_id]);
+    NSLog(@"推荐 -URl--%@",[NSString stringWithFormat:AMD_More_TuiJian,_id]);
+    NSLog(@"资讯 -URl--%@",[NSString stringWithFormat:AMD_More_NEWS,_id]);
+    FenQvButController * fq=[FenQvButController new];
+    //push控制器的封装
+    [self pushVc:fq];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

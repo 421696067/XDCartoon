@@ -14,7 +14,10 @@
  * 在重写set方法 跳转界面到动画详情界面
  */
 @property (nonatomic,strong)NSString * animeDetailId;
-
+/*!
+ * 设置控制器的Push操作
+ */
+-(void)pushVc:(UIViewController *)vc;
 /*!
  * 设置背景需不需要 透明的背景
  */

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="326" id="KGk-i7-Jjw" customClass="FenQBHotCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="326"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="325.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wU2-1t-LrW" customClass="FenQBHotView">
+                        <rect key="frame" x="165" y="5" width="145" height="150"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZn-OR-gCU" customClass="FenQBHotView">
+                        <rect key="frame" x="10" y="165" width="145" height="150"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HR9-ZN-hmc" customClass="FenQBHotView">
+                        <rect key="frame" x="165" y="165" width="145" height="150"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twa-AY-0KK" customClass="FenQBHotView">
+                        <rect key="frame" x="10" y="5" width="145" height="150"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="Mzt-4E-y5M"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="HZn-OR-gCU" firstAttribute="height" secondItem="twa-AY-0KK" secondAttribute="height" id="5NM-Eq-9aJ"/>
+                    <constraint firstItem="HZn-OR-gCU" firstAttribute="top" secondItem="twa-AY-0KK" secondAttribute="bottom" constant="10" id="7HP-u1-VJg"/>
+                    <constraint firstItem="wU2-1t-LrW" firstAttribute="width" secondItem="twa-AY-0KK" secondAttribute="width" id="C4p-1z-VTk"/>
+                    <constraint firstItem="twa-AY-0KK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="EvD-zu-de7"/>
+                    <constraint firstItem="twa-AY-0KK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="FOd-uD-vec"/>
+                    <constraint firstItem="HZn-OR-gCU" firstAttribute="width" secondItem="twa-AY-0KK" secondAttribute="width" id="YVd-Pn-naP"/>
+                    <constraint firstItem="wU2-1t-LrW" firstAttribute="leading" secondItem="twa-AY-0KK" secondAttribute="trailing" constant="10" id="Z3l-l1-KRp"/>
+                    <constraint firstItem="HR9-ZN-hmc" firstAttribute="width" secondItem="wU2-1t-LrW" secondAttribute="width" id="ZQW-7C-8lZ"/>
+                    <constraint firstItem="wU2-1t-LrW" firstAttribute="height" secondItem="twa-AY-0KK" secondAttribute="height" id="a3e-Bn-a5a"/>
+                    <constraint firstItem="wU2-1t-LrW" firstAttribute="top" secondItem="twa-AY-0KK" secondAttribute="top" id="eYn-tU-lyO"/>
+                    <constraint firstItem="HR9-ZN-hmc" firstAttribute="height" secondItem="wU2-1t-LrW" secondAttribute="height" id="hOn-QG-OgN"/>
+                    <constraint firstAttribute="trailing" secondItem="wU2-1t-LrW" secondAttribute="trailing" constant="10" id="iiy-4M-Ay6"/>
+                    <constraint firstItem="HZn-OR-gCU" firstAttribute="leading" secondItem="twa-AY-0KK" secondAttribute="leading" id="jD9-bH-WeZ"/>
+                    <constraint firstItem="HR9-ZN-hmc" firstAttribute="centerY" secondItem="HZn-OR-gCU" secondAttribute="centerY" id="jL2-vG-UBB"/>
+                    <constraint firstItem="HR9-ZN-hmc" firstAttribute="centerX" secondItem="wU2-1t-LrW" secondAttribute="centerX" id="mKC-Gj-FgQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="v1" destination="twa-AY-0KK" id="9dE-dj-eKe"/>
+                <outlet property="v2" destination="wU2-1t-LrW" id="4pa-ST-Kh5"/>
+                <outlet property="v3" destination="HZn-OR-gCU" id="Vhv-bg-tWg"/>
+                <outlet property="v4" destination="HR9-ZN-hmc" id="Nh3-TM-TkH"/>
+            </connections>
+            <point key="canvasLocation" x="201" y="226"/>
+        </tableViewCell>
+    </objects>
+</document>

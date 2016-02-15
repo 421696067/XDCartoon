@@ -29,7 +29,7 @@
         for (NSDictionary * dict1 in group.eps)
         {
             EverOne * one=[EverOne yy_modelWithJSON:dict1];
-            one.url=dict1[@"image"][@"url"];
+             one.url=dict1[@"image"][@"url"];
             [OArr addObject:one];
         }
         //FIXME: 最重要的 绑定数组和eps的一句话

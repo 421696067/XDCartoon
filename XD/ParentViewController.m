@@ -34,11 +34,17 @@
     UIBarButtonItem * item = [[UIBarButtonItem alloc]initWithImage:imageRender(@"ht") style:UIBarButtonItemStylePlain target:self   action:@selector(backBut)];
     self.navigationItem.leftBarButtonItem=item;
 }
+
 -(void)backBut
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+#pragma mark-设置导航栏的Push 操作
+-(void)pushVc:(UIViewController *)vc
+{
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 -(void)setIsBckView:(BOOL)isBckView
 {

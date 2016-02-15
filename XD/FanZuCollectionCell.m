@@ -10,7 +10,6 @@
 
 #define nameColor [UIColor blackColor]//名字
 #define onairEpColor  [UIColor grayColor] //更新至。。
-
 #define BgTextViewHeight  50*View_Radio//底部背景的高度
 @interface FanZuCollectionCell ()
 @property (nonatomic,strong)UIImageView * iconImage;
@@ -120,6 +119,5 @@
     }
     return _OnairEp;
 }
-
 
 @end

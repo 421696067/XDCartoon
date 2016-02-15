@@ -1,20 +1,17 @@
 //
-//  TuiJianFLCell.m
+//  FenQBHotView.m
 //  XD
 //
-//  Created by 李攀祥 on 16/1/10.
+//  Created by 李攀祥 on 16/1/29.
 //  Copyright © 2016年 李攀祥. All rights reserved.
 //
 
-#import "TuiJianFLCell.h"
-//每个cell的高度
-#define CellWidth  (Screen_Width-30*View_Radio)/2
+#import "FenQBHotView.h"
 
 #define CellHeight   150*View_Radio
 #define IconImageHeight  110*View_Radio
 
-@interface TuiJianFLCell ()
-
+@interface FenQBHotView ()
 @property (nonatomic,strong)UIImageView * iconImage;
 //评论数视图
 @property (nonatomic,strong)UIView *commentBgView ;
@@ -22,41 +19,59 @@
 @property (nonatomic,strong)UILabel * commentNumber;
 //下面名字的详情
 @property (nonatomic,strong)UILabel * nameLabel;
-
+//为了添加点击事件的
+@property (nonatomic,strong)UIButton * topButton;
 @end
 
-@implementation TuiJianFLCell
--(void)setModel:(EverOne *)model
+@implementation FenQBHotView
+//类方法加载
++(id)fenQBView
+{
+    return [[self alloc] init];
+}
+
+/*!
+ * 如果调用init方法时 系统会自动调用initWithFrame:方法
+ */
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor=[UIColor clearColor];
+        self.layer.masksToBounds=YES;
+        self.layer.cornerRadius=5.0f;
+        //设置圆角
+        self.clipsToBounds=YES;
+        [self creatUI];
+        [self updateLayout];
+    }
+    return self;
+}
+
+-(void)setModel:(FenQBHot *)model
 {
     _model=model;
     [self.iconImage sd_setImageWithURL:[NSURL URLWithString:model.url]];
     self.commentNumber.text =model.playCount;
     self.nameLabel.text=model.title;
 }
-
-- (void)awakeFromNib {
-    self.backgroundColor=[UIColor redColor];
-    self.layer.masksToBounds=YES;
-    self.layer.cornerRadius=5.0f;
-    //设置圆角
-    self.clipsToBounds=YES;
-    [self creatUI];
-    [self updateLayout];
-}
 #pragma mark-添加视图
 -(void)creatUI
-{   [self.contentView addSubview:self.iconImage];
-    [self.contentView addSubview:self.commentBgView];
-    [self.contentView addSubview:self.commentImage];
-    [self.contentView addSubview:self.commentNumber];
-    [self.contentView addSubview:self.nameLabel];
+{
+    [self addSubview:self.iconImage];
+    [self addSubview:self.commentBgView];
+    [self addSubview:self.commentImage];
+    [self addSubview:self.commentNumber];
+    [self addSubview:self.nameLabel];
+    [self addSubview:self.topButton];
 }
 
 -(void)updateLayout
 {
     [self.iconImage mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.left.right.top.mas_equalTo(0);
-    make.height.mas_equalTo(IconImageHeight);
+        make.left.right.top.mas_equalTo(0);
+        make.height.mas_equalTo(IconImageHeight);
     }];
     
     [self.commentBgView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -77,11 +92,16 @@
         make.left.mas_equalTo(self.commentImage.mas_right).offset(0);
     }];
     
-   [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.bottom.mas_equalTo(0);
         make.height.mas_equalTo(CellHeight-IconImageHeight);
     }];
+    
+    [self.topButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.bottom.mas_equalTo(0);
+    }];
 }
+
 #pragma mark-懒加载
 -(UIImageView *)iconImage
 {
@@ -137,5 +157,19 @@
     return _nameLabel;
 }
 
+-(UIButton *)topButton
+{
+    if (!_topButton) {
+        _topButton=[UIButton buttonWithType:UIButtonTypeCustom];
+        [_topButton addTarget:self action:@selector(butClick) forControlEvents:UIControlEventTouchUpInside];
+        
+    }
+    return _topButton;
+}
+
+-(void)butClick
+{
+    self.block(self.model._id);
+}
 
 @end

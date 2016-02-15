@@ -222,8 +222,15 @@
      */
     self.EpCount.text = [model.onairEpNumber isEqualToString:model.totalEpCount]?[NSString stringWithFormat:@"%@话全",model.totalEpCount]:[NSString stringWithFormat:@"更新至%@话",model.onairEpNumber];
 
-    
-    [self.star setStar:[model.score floatValue]/2];
+    if ([model.score isEqualToString:@"0"])
+    {   [self.star setStar:[model.score floatValue]/2];
+        [self.star removeFromSuperview];
+    }
+    else
+    {
+        [self.star setStar:[model.score floatValue]/2];
+    }
+    //这里没什么用
     if (self.style==UITableViewCellStyleDefault)
     {
         self.intro.text=model.intro;

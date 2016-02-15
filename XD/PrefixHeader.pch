@@ -121,23 +121,24 @@
  *  AMD 更多界面的 头部image
  *  参数为：组的_id
  */
-#define  AMD_More_Image @"http://pudding.cc/api/v2/ep_category/%@/banner?apiKey=yuki_ios&auth1=9c8caa3121a2adf19fe0c6e5cf515b97&auth2=81ed47f4fdb3657cd00b112afc26d9e3&brand=Apple&channelId=App%20Store&currentUserId=55abec46e597fac94b8b456c&deviceKey=359A864D-C74C-4304-AB78-E6731A94CDCB&model=iPhone&os=iOS&osv=9.0.1&timestamp=1452612180&version=2.7.1"
+#define  AMD_More_Image @"http://pudding.cc/api/v2/ep_category/%@/banner?apiKey=yuki_ios&auth1=9c8caa3121a2adf19fe0c6e5cf515b97&auth2=81ed47f4fdb3657cd00b112afc26d9e3&deviceKey=359A864D-C74C-4304-AB78-E6731A94CDCB&model=iPhone&os=iOS&osv=9.0.1&timestamp=1452612180&version=2.7.1"
 /*!
  * AMD 界面的 hot 
  * 参数为：组的_id
  */
-#define  AMD_More_Hots @"http://pudding.cc/api/v2/ep/hot?apiKey=yuki_ios&auth1=9c8caa3121a2adf19fe0c6e5cf515b97&auth2=81ed47f4fdb3657cd00b112afc26d9e3&brand=Apple&cId=%@&channelId=App%20Store&currentUserId=55abec46e597fac94b8b456c&deviceKey=359A864D-C74C-4304-AB78-E6731A94CDCB&limit=4&model=iPhone&os=iOS&osv=9.0.1&timestamp=1452612180&version=2.7.1"
+
+#define  AMD_More_Hots @"http://pudding.cc/api/v2/ep/hot?apiKey=yuki_ios&auth1=9c8caa3121a2adf19fe0c6e5cf515b97&auth2=81ed47f4fdb3657cd00b112afc26d9e3&brand=Apple&cId=%@&deviceKey=359A864D-C74C-4304-AB78-E6731A94CDCB&limit=4&model=iPhone&os=iOS&osv=9.0.1&timestamp=1452612180&version=2.7.1"
 /*!
  * AMD 界面的 推荐
  * 参数为：组的_id
  */
-#define  AMD_More_TuiJian @"http://pudding.cc/api/v2/ep/recommend?apiKey=yuki_ios&auth1=9c8caa3121a2adf19fe0c6e5cf515b97&auth2=81ed47f4fdb3657cd00b112afc26d9e3&brand=Apple&cId=%@&channelId=App%20Store&currentUserId=55abec46e597fac94b8b456c&deviceKey=359A864D-C74C-4304-AB78-E6731A94CDCB&limit=4&model=iPhone&os=iOS&osv=9.0.1&timestamp=1452612180&version=2.7.1"
+#define  AMD_More_TuiJian @"http://pudding.cc/api/v2/ep/recommend?apiKey=yuki_ios&auth1=9c8caa3121a2adf19fe0c6e5cf515b97&auth2=81ed47f4fdb3657cd00b112afc26d9e3&brand=Apple&cId=%@&currentUserId=55abec46e597fac94b8b456c&deviceKey=359A864D-C74C-4304-AB78-E6731A94CDCB&limit=4&model=iPhone&os=iOS&osv=9.0.1&timestamp=1452612180&version=2.7.1"
 
 /*!
  * AMD 界面的  News
  * 参数为：组的_id
  */
-#define  AMD_More_NEWS @"http://pudding.cc/api/v2/ep?apiKey=yuki_ios&auth1=3dbf0cb623c39428a6f62e03e48b634b&auth2=d206219b0d3724dcf819b6d0181b3ea2&brand=Apple&cIds=%@&channelId=App%20Store&currentUserId=55abec46e597fac94b8b456c&deviceKey=359A864D-C74C-4304-AB78-E6731A94CDCB&limit=20&model=iPhone&os=iOS&osv=9.0.1&timestamp=1452612715&version=2.7.1"
+#define  AMD_More_NEWS @"http://pudding.cc/api/v2/ep?apiKey=yuki_ios&auth1=3dbf0cb623c39428a6f62e03e48b634b&auth2=d206219b0d3724dcf819b6d0181b3ea2&brand=Apple&cIds=%@&currentUserId=55abec46e597fac94b8b456c&deviceKey=359A864D-C74C-4304-AB78-E6731A94CDCB&limit=20&model=iPhone&os=iOS&osv=9.0.1&timestamp=1452612715&version=2.7.1"
 
 /**MAD更多按钮界面(分区界面)中的 hot和推荐的 更多按钮******************/
 /*!
@@ -181,6 +182,7 @@
  * 参数：%@ _id  & offset
  */
 #define FanZu_FenLei_Detail_Cell @"http://pudding.cc/api/v1/category/%@/anime?apiKey=yuki_ios&auth1=36c5fb34a7c25e21f970a46cdda0463e&deviceKey=CA8831F6-D5B6-4C2E-B371-61A5D5F829F5&limit=20&timestamp=1445616616"
+
 //http://pudding.cc/api/v1/category/548920d7e497fabc7c8b45a0/anime?apiKey=yuki_ios&auth1=36c5fb34a7c25e21f970a46cdda0463e&deviceKey=CA8831F6-D5B6-4C2E-B371-61A5D5F829F5&limit=20&timestamp=1445616616
 
 

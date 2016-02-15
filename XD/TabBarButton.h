@@ -10,5 +10,4 @@
 
 @interface TabBarButton : UIButton
 - (void)setTitle:(NSString *)title  NormalImage:(NSString *)tabBarNormal selImage:(NSString *)tabBarSel;
-
 @end
